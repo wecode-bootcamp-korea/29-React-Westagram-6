@@ -1,24 +1,33 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import LoginSoojin from './pages/soojin/Login/Login';
-import MainSoojin from './pages/soojin/Main/Main';
+import LoginSoojin from './pages/soojin/Login/LoginSoojin';
+import MainSoojin from './pages/soojin/Main/MainSoojin';
 
-import LoginChaehyun from './pages/chaehyun/Login/Login';
-import MainChaehyun from './pages/chaehyun/Main/Main';
+import LoginChaehyun from './pages/chaehyun/Login/LoginChaehyun';
+import MainChaehyun from './pages/chaehyun/Main/MainChaehyun';
 
-import LoginChungkyu from './pages/chungkyu/Login/Login';
-import MainChungkyu from './pages/chungkyu/Main/Main';
+import LoginChungkyu from './pages/chungkyu/Login/LoginChungkyu';
+import MainChungkyu from './pages/chungkyu/Main/MainChungkyu';
 
-import LoginMooseon from './pages/mooseon/Login/Login';
-import MainMooseon from './pages/mooseon/Main/Main';
+import LoginMooseon from './pages/mooseon/Login/LoginMooseon';
+import MainMooseon from './pages/mooseon/Main/MainMooseon';
 
-<Route path="/login-chaehyun" element={<LoginChaehyun />} />;
-<Route path="/login-soojin" element={<LoginSoojin />} />;
-<Route path="/login-chungkyu" element={<LoginChungkyu />} />;
-<Route path="/login-mooseon" element={<LoginMooseon />} />;
+function Router() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/login-chaehyun" element={<LoginChaehyun />} />
+        <Route path="/login-soojin" element={<LoginSoojin />} />
+        <Route path="/login-chungkyu" element={<LoginChungkyu />} />
+        <Route path="/login-mooseon" element={<LoginMooseon />} />
+        <Route path="/main-chaehyun" element={<MainChaehyun />} />
+        <Route path="/main-soojin" element={<MainSoojin />} />
+        <Route path="/main-chungkyu" element={<MainChungkyu />} />
+        <Route path="/main-mooseon" element={<MainMooseon />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
 
-<Route path="/main-chaehyun" element={<MainChaehyun />} />;
-<Route path="/main-soojin" element={<MainSoojin />} />;
-<Route path="/main-chungkyu" element={<MainChungkyu />} />;
-<Route path="/main-mooseon" element={<MainMooseon />} />;
+export default Router;
