@@ -1,0 +1,50 @@
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.wrap {
+  @include flex-between;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid #e2e2e2;
+  border-top: 1px solid #e2e2e2;
+  padding: 10px 180px;
+  height: 60px;
+  background-color: white;
+  font-family: 'Lobster', cursive;
+
+  .item {
+    font-size: 30px;
+
+    input {
+      background-color: #efefef;
+      border: 0px solid #e2e2e2;
+      border-radius: 4px;
+      width: 250px;
+      height: 30px;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    @include flex-center;
+    justify-content: flex-end;
+
+    img {
+      width: 40px;
+      margin: 5px;
+    }
+  }
+}
