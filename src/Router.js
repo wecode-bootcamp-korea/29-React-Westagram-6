@@ -13,11 +13,12 @@ import MainChungkyu from './pages/chungkyu/Main/MainChungkyu';
 import LoginMooseon from './pages/mooseon/Login/LoginMooseon';
 import MainMooseon from './pages/mooseon/Main/MainMooseon';
 
-import Nav from './components/Nav/Nav'
+import Nav from './components/Nav/Nav';
 
 function Router() {
   return (
     <BrowserRouter>
+      <Nav />
       <Routes>
         <Route path="/login-chaehyun" element={<LoginChaehyun />} />
         <Route path="/login-soojin" element={<LoginSoojin />} />
@@ -27,7 +28,6 @@ function Router() {
         <Route path="/main-soojin" element={<MainSoojin />} />
         <Route path="/main-chungkyu" element={<MainChungkyu />} />
         <Route path="/main-mooseon" element={<MainMooseon />} />
-        <Route path="/nav" element={<Nav />} />
       </Routes>
     </BrowserRouter>
   );

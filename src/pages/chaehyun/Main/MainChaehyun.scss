@@ -1,0 +1,328 @@
+.mainChaehyun {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-top: 30px;
+
+  main {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 50px;
+    margin-left: 100px;
+  }
+
+  .mainNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 820px;
+    margin: 0 auto;
+  }
+
+  .navInstagramWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+  }
+
+  .navRightWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 150px;
+  }
+
+  .navIcon {
+    display: block;
+    width: 38px;
+    height: 32px;
+    padding: 0px 5px;
+  }
+
+  #navInstagramLogo {
+    font-size: 20px;
+  }
+
+  #searchIconId {
+    position: absolute;
+    top: 7.5px;
+    left: 52px;
+    width: 10px;
+    height: 10px;
+  }
+
+  .searchBox::placeholder {
+    text-align: center;
+  }
+
+  .searchWrapper {
+    position: relative;
+    margin-right: 40px;
+  }
+
+  .searchBox {
+    height: 25px;
+    width: 150px;
+    border: 1px solid grey;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .feedIconContainerLeft,
+  .iconButton {
+    width: 18px;
+    height: 18px;
+    padding: 2px;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+  }
+
+  .feedIconContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 10px 5px;
+  }
+
+  .feedIconContainerLeft {
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
+  }
+
+  .feedTop .seeMore {
+    display: block;
+    width: 12px;
+    height: 10px;
+  }
+
+  .commentWriter {
+    display: block;
+  }
+
+  .feedTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    margin-left: 10px;
+  }
+
+  .feedProfileContainer {
+    display: flex;
+    align-items: center;
+    height: 40px;
+  }
+
+  .feedTop .profilePicture {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border: 0.3px solid black;
+    border-radius: 70%;
+    margin-right: 8px;
+    overflow: hidden;
+  }
+
+  .feedProfileId {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .feedTop .iconButton {
+    display: block;
+    width: 28px;
+    height: 28px;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+  }
+
+  .feedPicture {
+    width: 100%;
+    height: 65%;
+  }
+
+  .likesWrapper {
+    display: flex;
+    align-items: center;
+    margin: 0px 10px;
+
+    .profilePicture {
+      display: block;
+      width: 24px;
+      height: 24px;
+      border-radius: 70%;
+      overflow: hidden;
+      border: 0.3px solid black;
+    }
+  }
+
+  .content {
+    display: inline;
+    margin: 5px 10px;
+  }
+
+  .likesPerson,
+  .howMany {
+    font-weight: bold;
+  }
+
+  .feedContent {
+    margin: 5px 10px;
+  }
+
+  .minutesAgo {
+    margin: 0px 10px 5px;
+    font-size: 9px;
+  }
+
+  .commentWrapper {
+    display: flex;
+  }
+
+  .commentWrite {
+    display: block;
+    width: 100%;
+    height: 40px;
+    border: thin solid grey;
+    border-left: 0;
+    font-size: 17px;
+
+    &::placeholder {
+      font-size: 12px;
+    }
+  }
+
+  .submit {
+    display: block;
+    width: 60px;
+    border-bottom: thin solid grey;
+    border-top: thin solid grey;
+    border-right: 0;
+    border-left: 0;
+    background-color: transparent;
+    color: blue;
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 450px;
+    height: 700px;
+    border: thin solid black;
+    background-color: white;
+  }
+
+  .mainRight {
+    width: 300px;
+    height: 360px;
+    border: thin solid black;
+    background-color: white;
+
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: 10px;
+      margin-top: 10px;
+      margin-right: 10px;
+    }
+  }
+
+  .recommendsForMemeber .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 5px;
+    font-size: 12px;
+  }
+
+  .recommends {
+    color: grey;
+    font-size: 14px;
+    line-height: 5px;
+  }
+
+  .seeAll {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+  }
+
+  .mainRight {
+    .profilePicture {
+      flex: 2;
+      width: 48px;
+      height: 48px;
+      border-radius: 70%;
+      overflow: hidden;
+      border: 0.3px solid black;
+    }
+
+    .profileId {
+      flex: 6.5;
+      margin-left: 10px;
+      font-weight: bold;
+    }
+  }
+
+  .transform {
+    flex: 1.5;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    color: blue;
+    font-size: 14px;
+  }
+
+  .followBox {
+    .profilePicture {
+      flex: 1.4;
+      width: 32px;
+      height: 32px;
+      border-radius: 70%;
+      overflow: hidden;
+      border: 0.3px solid black;
+      margin-right: 10px;
+    }
+
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    margin-top: 20px;
+
+    .profileId {
+      line-height: 7px;
+      font-size: 14px;
+      font-weight: bold;
+      margin-left: -2px;
+    }
+  }
+
+  .recommendWho {
+    flex: 7.1;
+  }
+
+  .whoFollowsWho {
+    color: grey;
+    font-size: 10px;
+    line-height: 5px;
+    margin-top: 10px;
+  }
+
+  .followBox .button {
+    flex: 1.5;
+    color: blue;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 14px;
+  }
+}
