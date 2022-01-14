@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+}
+
+$theme-color: #e2e2e2;
+$border-style: 1px solid $theme-color;
+
+@mixin translate-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Westagram {
+  height: 100vh;
+  position: relative;
+  text-align: center;
+}
+
+.WestagramContainer {
+  position: absolute;
+  @include translate-center;
+  padding: 80px 55px;
+  border: $border-style;
+  background-color: white;
+
+  h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 55px;
+    font-weight: normal;
+    margin-top: 0px;
+  }
+
+  a {
+    font-size: 10px;
+    color: dodgerblue;
+    text-decoration-line: none;
+  }
+}
+
+.Login {
+  input {
+    width: 230px;
+    margin: 4px;
+    padding: 9px;
+    border: $border-style;
+    border-radius: 4px;
+
+    cursor: text;
+    background-color: ghostwhite;
+  }
+  button {
+    width: 230px;
+    margin: 4px;
+    padding: 9px;
+    border: $border-style;
+    border-radius: 4px;
+
+    background-color: dodgerblue;
+    margin-bottom: 80px;
+    color: white;
+    font-weight: bold;
+    opacity: 0.5;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

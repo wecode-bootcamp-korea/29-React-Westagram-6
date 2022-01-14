@@ -13,7 +13,7 @@ import MainChungkyu from './pages/chungkyu/Main/MainChungkyu';
 import LoginMooseon from './pages/mooseon/Login/LoginMooseon';
 import MainMooseon from './pages/mooseon/Main/MainMooseon';
 
-import Nav from './components/Nav/Nav'
+import Nav from './components/Nav/Nav';
 
 function Router() {
   return (
