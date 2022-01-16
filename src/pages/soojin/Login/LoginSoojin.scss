@@ -2,22 +2,15 @@
   box-sizing: border-box;
 }
 
-$theme-color: #e2e2e2;
-$border-style: 1px solid $theme-color;
+@import '../../../styles/variables.scss';
 
-@mixin translate-center {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.Westagram {
+.westagram {
   height: 100vh;
   position: relative;
   text-align: center;
 }
 
-.WestagramContainer {
+.westagramContainer {
   position: absolute;
   @include translate-center;
   padding: 80px 55px;
@@ -38,7 +31,7 @@ $border-style: 1px solid $theme-color;
   }
 }
 
-.Login {
+.login {
   input {
     width: 230px;
     margin: 4px;

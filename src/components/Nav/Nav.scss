@@ -1,13 +1,4 @@
-@mixin flex-between {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-@mixin flex-center {
-  display: flex;
-  align-items: center;
-}
+@import '../../styles/variables.scss';
 
 .wrap {
   @include flex-between;
@@ -15,8 +6,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  border-bottom: 1px solid #e2e2e2;
-  border-top: 1px solid #e2e2e2;
+  border-top: $border-style;
+  border-bottom: $border-style;
   padding: 10px 180px;
   height: 60px;
   background-color: white;
