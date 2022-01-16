@@ -10,51 +10,16 @@
 }
 
 .mainBody {
-  // padding-top: 70px;
-  // margin: 0px 17%;
-  // font-family: $theme-font
-  .wrap {
-    @include flex-between;
-    position: fixed;
-    top: 0;
-    padding: 10px;
-    height: 60px;
-    background-color: white;
-    font-family: 'Lobster', cursive;
-
-    .item {
-      font-size: 30px;
-
-      input {
-        background-color: #efefef;
-        border: 0px solid #e2e2e2;
-        border-radius: 4px;
-        width: 250px;
-        height: 30px;
-      }
-    }
-
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-
-      @include flex-center;
-      justify-content: flex-end;
-
-      img {
-        width: 40px;
-        margin: 5px;
-      }
-    }
-  }
+  padding-top: 90px;
+  margin: 0px 17%;
+  font-family: $theme-font;
 
   .mainpage {
     .article {
       top: 10%;
       width: 60%;
       background-color: white;
-      border: 1px solid gray;
+      border: $border-style;
 
       .profile {
         @include flex-center;
@@ -113,7 +78,7 @@
 
     .main-right {
       position: fixed;
-      top: 100px;
+      top: 90px;
       right: 17%;
       width: 25%;
       img {
