@@ -1,3 +1,4 @@
+@import '../../../styles/common.scss';
 @import '../../styles/variables.scss';
 
 .wrap {
@@ -18,7 +19,7 @@
 
     input {
       background-color: #efefef;
-      border: 0px solid #e2e2e2;
+      border: none;
       border-radius: 4px;
       width: 250px;
       height: 30px;
