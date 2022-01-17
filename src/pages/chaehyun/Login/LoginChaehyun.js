@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 //import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
 function LoginChaehyun() {
+  const [inputId, setInputId] = useState('');
+  const [inputPw, setInputPw] = useState('');
+  const handleInputId = e => {
+    setInputId(e.target.value);
+    console.log(inputId);
+  };
+  const handleInputPw = e => {
+    setInputPw(e.target.value);
+    console.log(inputPw);
+  };
   const navigate = useNavigate();
   const goToMain = () => {
     navigate('/main-chaehyun');
@@ -16,11 +26,13 @@ function LoginChaehyun() {
           </div>
           <div className="inputWrapper">
             <input
+              onChange={handleInputId}
               type="text"
               className="ID"
               placeholder="  전화번호, 사용자 이름 또는 이메일"
             />
             <input
+              onChange={handleInputPw}
               type="password"
               className="passwords"
               placeholder="  비밀번호"
