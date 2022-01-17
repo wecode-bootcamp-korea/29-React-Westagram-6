@@ -1,9 +1,11 @@
 import React from 'react';
+import Nav from '../../../components/Nav/Nav';
 
 function MainChaehyun() {
   return (
     <body>
       <div className="mainChaehyun">
+        <Nav />
         <main>
           <div className="feeds">
             <article>

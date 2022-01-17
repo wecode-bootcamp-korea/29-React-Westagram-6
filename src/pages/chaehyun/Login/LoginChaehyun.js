@@ -13,6 +13,14 @@ function LoginChaehyun() {
     setInputPw(e.target.value);
     console.log(inputPw);
   };
+
+  const [isActive, setIsActive] = useState(false);
+  const isPassedLogin = () => {
+    return inputId.includes('@') && inputPw.length > 8
+      ? setIsActive(true)
+      : setIsActive(false);
+  };
+
   const navigate = useNavigate();
   const goToMain = () => {
     navigate('/main-chaehyun');
@@ -27,12 +35,14 @@ function LoginChaehyun() {
           <div className="inputWrapper">
             <input
               onChange={handleInputId}
+              onKeyUp={isPassedLogin}
               type="text"
               className="ID"
               placeholder="  전화번호, 사용자 이름 또는 이메일"
             />
             <input
               onChange={handleInputPw}
+              onKeyUp={isPassedLogin}
               type="password"
               className="passwords"
               placeholder="  비밀번호"
@@ -40,7 +50,13 @@ function LoginChaehyun() {
           </div>
           <div className="buttonWrapper">
             {/* <Link to='/main'> */}
-            <button className="loginButton" onClick={goToMain}>
+            <button
+              className={
+                isActive ? 'loginButtonActive' : 'loginButtonNotActive'
+              }
+              onClick={goToMain}
+              disabled={inputId === '' || inputPw === '' ? true : false}
+            >
               로그인
             </button>
             {/* </Link> */}

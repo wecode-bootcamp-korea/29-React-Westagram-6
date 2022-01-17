@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import LoginSoojin from './pages/soojin/Login/LoginSoojin';
@@ -13,12 +13,9 @@ import MainChungkyu from './pages/chungkyu/Main/MainChungkyu';
 import LoginMooseon from './pages/mooseon/Login/LoginMooseon';
 import MainMooseon from './pages/mooseon/Main/MainMooseon';
 
-import Nav from './components/Nav/Nav';
-
 function Router() {
   return (
     <BrowserRouter>
-      <Nav />
       <Routes>
         <Route path="/login-chaehyun" element={<LoginChaehyun />} />
         <Route path="/login-soojin" element={<LoginSoojin />} />
