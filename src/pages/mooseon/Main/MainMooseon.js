@@ -18,7 +18,11 @@ function MainMooseon() {
               <img alt="more" />
             </div>
             <div>
-              <img src="https://placeimg.com/112/112/any" alt="feedImage" />
+              <img
+                id="mainImg"
+                src="https://placeimg.com/112/112/any"
+                alt="feedImage"
+              />
             </div>
             <div>
               <img alt="feed-heart" />

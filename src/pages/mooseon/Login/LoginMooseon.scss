@@ -36,7 +36,7 @@
   height: 50px;
   text-align: center;
   border-radius: 5px;
-  background-color: #c4e1fb;
+
   margin: 20px auto;
   display: block;
   border-bottom: none;
@@ -63,4 +63,11 @@ a {
   margin-top: 150px;
   display: block;
   text-decoration-line: none;
+}
+.onColor {
+  background-color: #0562f7;
+}
+
+.offColor {
+  background-color: #c4e1fb;
 }
