@@ -7,11 +7,9 @@ function LoginChaehyun() {
   const [inputPw, setInputPw] = useState('');
   const handleInputId = e => {
     setInputId(e.target.value);
-    console.log(inputId);
   };
   const handleInputPw = e => {
     setInputPw(e.target.value);
-    console.log(inputPw);
   };
 
   const [isActive, setIsActive] = useState(false);
@@ -25,6 +23,7 @@ function LoginChaehyun() {
   const goToMain = () => {
     navigate('/main-chaehyun');
   };
+
   return (
     <body>
       <div className="loginChaehyun">

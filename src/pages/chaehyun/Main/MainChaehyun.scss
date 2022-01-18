@@ -197,6 +197,10 @@
     &::placeholder {
       font-size: 12px;
     }
+
+    &:focus {
+      outline: none;
+    }
   }
 
   .submit {
@@ -324,5 +328,30 @@
     border: 0;
     outline: 0;
     font-size: 14px;
+  }
+
+  .uploadedCommentWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 10px;
+  }
+
+  .uploadedCommentWrapper {
+    .uploadedComment {
+      flex-grow: 1;
+      margin-left: 5px;
+    }
+
+    .name {
+      font-weight: bold;
+    }
+
+    .delete {
+      width: 10px;
+      height: 10px;
+      border: 0;
+      outline: 0;
+      background-color: transparent;
+    }
   }
 }

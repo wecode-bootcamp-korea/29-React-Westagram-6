@@ -1,7 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Nav from '../../../components/Nav/Nav';
 
 function MainChaehyun() {
+  const [newComment, setNewComment] = useState('');
+  const [commentData, setCommentData] = useState([]);
+  const handleNewComment = e => {
+    setNewComment(e.target.value);
+  };
+
+  const handleCommentData = () => {
+    setCommentData(cur => [
+      ...cur,
+      { id: 'zoro', comment: newComment, idx: Math.random() },
+    ]);
+  };
+
+  const UploadComment = ({ id, comment, idx }) => {
+    return (
+      <div className="uploadedCommentWrapper">
+        <div className="name">{id}</div>
+        <div className="uploadedComment">{comment}</div>
+        <button className="delete">x</button>
+      </div>
+    );
+  };
+
+  const pressEnter = e => {
+    if (e.key === 'Enter') {
+      handleCommentData(e);
+      e.target.value = '';
+    }
+  };
+
   return (
     <body>
       <div className="mainChaehyun">
@@ -80,13 +110,26 @@ function MainChaehyun() {
                 <span className="feedProfileId">monkey_d_luffy</span> 4억!!!
               </p>
               <p className="minutesAgo">53분전</p>
+              <ul className="commentBox">
+                {commentData.map(data => (
+                  <UploadComment
+                    id={data.id}
+                    comment={data.comment}
+                    key={data.idx}
+                  />
+                ))}
+              </ul>
               <div className="commentWrapper">
                 <input
                   className="commentWrite"
                   type="text"
                   placeholder=" 댓글달기..."
+                  onChange={handleNewComment}
+                  onKeyPress={pressEnter}
                 />
-                <button className="submit">게시</button>
+                <button className="submit" onClick={handleCommentData}>
+                  게시
+                </button>
               </div>
             </article>
           </div>
