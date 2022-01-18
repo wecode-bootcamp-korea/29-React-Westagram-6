@@ -63,17 +63,29 @@
         .explanation {
           @include flex-center;
           font-size: 14px;
-          a {
-            padding: 5px;
+          margin: 5px;
+          .boldId {
             font-weight: bold;
+            margin-right: 5px;
           }
         }
       }
-      .comments {
+
+      .commentWrapper {
         display: flex;
+        font-size: 14px;
+        .yourId {
+          font-weight: bold;
+          margin: 2px 12px;
+        }
+      }
+
+      .comments {
         input {
+          display: flex;
           width: 100%;
           height: 30px;
+          margin-top: 10px;
         }
       }
     }

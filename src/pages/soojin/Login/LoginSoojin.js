@@ -6,11 +6,14 @@ function LoginSoojin() {
   const [inputPw, setInputPw] = useState('');
 
   const handleIdInput = event => {
-    setInputId(event.target.value);
+    const { value } = event.target;
+    setInputId(value);
   };
 
   const handlePwInput = event => {
-    setInputPw(event.target.value);
+    // setPassword(event.target.value);
+    const { value } = event.target;
+    setInputPw(value);
   };
 
   const [isValidate, setIsValidate] = useState(true);
