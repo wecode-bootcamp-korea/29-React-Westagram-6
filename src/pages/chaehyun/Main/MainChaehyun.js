@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Nav from '../../../components/Nav/Nav';
 
 function MainChaehyun() {
@@ -30,6 +30,13 @@ function MainChaehyun() {
       handleCommentData(e);
       e.target.value = '';
     }
+  };
+
+  const inputRef = useRef();
+
+  const pressSubmit = e => {
+    handleCommentData(e);
+    inputRef.current.value = '';
   };
 
   return (
@@ -126,8 +133,9 @@ function MainChaehyun() {
                   placeholder=" 댓글달기..."
                   onChange={handleNewComment}
                   onKeyPress={pressEnter}
+                  ref={inputRef}
                 />
-                <button className="submit" onClick={handleCommentData}>
+                <button className="submit" onClick={pressSubmit}>
                   게시
                 </button>
               </div>
