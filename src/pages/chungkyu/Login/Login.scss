@@ -43,14 +43,10 @@ button {
   padding: 8px;
   border: none;
   outline: none;
-
-  &:disabled {
-    background-color: skyblue;
-  }
 }
 
 button:disabled {
-  background-color: 'skyblue';
+  background-color: skyblue;
 }
 
 .forgetpw {

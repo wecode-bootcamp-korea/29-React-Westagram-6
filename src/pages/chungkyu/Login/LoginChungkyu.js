@@ -1,17 +1,40 @@
 import './Login.scss';
 import { Link } from 'react-router-dom';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function LoginChungkyu() {
-  const [active, setActive] = useState();
+  const [activeid, setActiveid] = useState();
 
-  console.log('start', active);
   const handleIdinPut = event => {
-    setActive(event.target.value);
+    setActiveid(event.target.value);
   };
+
+  const [activepw, setActivepw] = useState();
+
   const handleIdinPw = event => {
-    setActive(event.target.value);
+    setActivepw(event.target.value);
   };
+
+  const [button, setButton] = useState(true);
+  console.log('start', button);
+
+  const changeColor = () => {
+    if (activeid.length > 5 && activepw.length > 5) {
+      setButton(false);
+    } else {
+      setButton(true);
+    }
+  };
+  console.log('end', button);
+
+  // useEffect(() => {
+  //   if (activeid.length > 5 && activepw.length > 5) {
+  //     setButton(false);
+  //   } else {
+  //     setButton(true);
+  //   }
+  // }, [activeid, activepw]);
+
   return (
     <div>
       <link href="style/login.css" rel="stylesheet" type="text/css" />
@@ -31,18 +54,20 @@ function LoginChungkyu() {
               type="text"
               placeholder="전화번호, 사용자 이름 또는 이메일"
               onChange={handleIdinPut}
+              onKeyup={changeColor}
             />
             <input
               id="inputpw"
               type="text"
               placeholder="비밀번호"
               onChange={handleIdinPw}
+              onKeyUp={changeColor}
             />
           </div>
           <div className="button-wrap">
             <Link to="/Main-chungkyu">
               {' '}
-              <button id="login"> 로그인</button>
+              <button disabled={button ? true : false}> 로그인</button>
             </Link>
           </div>
           <div className="forgetpw">
