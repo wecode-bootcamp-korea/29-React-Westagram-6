@@ -50,11 +50,9 @@ function LoginChaehyun() {
           <div className="buttonWrapper">
             {/* <Link to='/main'> */}
             <button
-              className={
-                isActive ? 'loginButtonActive' : 'loginButtonNotActive'
-              }
+              className="loginButton"
               onClick={goToMain}
-              disabled={inputId === '' || inputPw === '' ? true : false}
+              disabled={isActive ? false : true}
             >
               로그인
             </button>

@@ -65,18 +65,12 @@
     margin-bottom: 30px;
   }
 
-  .loginButtonNotActive {
-    width: 100%;
-    height: 100%;
+  .loginButton:disabled {
     background-color: lightblue;
-    border-radius: 5px;
-    border: 0;
-    outline: 0;
-    font-size: 14px;
     cursor: default;
   }
 
-  .loginButtonActive {
+  .loginButton {
     width: 100%;
     height: 100%;
     background-color: #0095f6;
