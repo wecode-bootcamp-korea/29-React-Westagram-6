@@ -43,66 +43,72 @@ function Feed() {
   // }, []);
 
   return (
-    <section className="article">
-      <div className="profile">
-        <div>
-          <img alt="My Profile" src="/images/soojin/myProfile.jpg" />
+    <div>
+      <section className="stories">
+        <img alt="stories" src="/images/soojin/stories.jpg" />
+      </section>
+
+      <section className="article">
+        <div className="profile">
+          <div>
+            <img alt="My Profile" src="/images/soojin/myProfile.jpg" />
+          </div>
+          <div>
+            <h1>
+              <a href="https://www.instagram.com/soojjnng/">sojjnng</a>
+            </h1>
+            <h2>
+              <a href="https://www.instagram.com/explore/locations/949584/lotteworld/">
+                lotteworld
+              </a>
+            </h2>
+          </div>
         </div>
-        <div>
-          <h1>
-            <a href="https://www.instagram.com/soojjnng/">sojjnng</a>
-          </h1>
-          <h2>
-            <a href="https://www.instagram.com/explore/locations/949584/lotteworld/">
-              lotteworld
-            </a>
-          </h2>
+        <div className="photo">
+          <img alt="feed" src="/images/soojin/IMG_9317.jpg" />
         </div>
-      </div>
-      <div className="photo">
-        <img alt="feed" src="/images/soojin/IMG_9317.jpg" />
-      </div>
-      <div className="information">
-        <ul id="icons">
-          <li>
-            <img alt="Liked icon" src="/images/soojin/iconLiked.jpg" />
-          </li>
-          <li>
-            <img alt="Comment icon" src="/images/soojin/iconComment.jpg" />
-          </li>
-          <li>
-            <img alt="Share icon" src="/images/soojin/iconShare.jpg" />
-          </li>
-          <li>
-            <img alt="Keep icon" src="/images/soojin/iconKeep.jpg" />
-          </li>
+        <div className="information">
+          <ul id="icons">
+            <li>
+              <img alt="Liked icon" src="/images/soojin/iconLiked.jpg" />
+            </li>
+            <li>
+              <img alt="Comment icon" src="/images/soojin/iconComment.jpg" />
+            </li>
+            <li>
+              <img alt="Share icon" src="/images/soojin/iconShare.jpg" />
+            </li>
+            <li>
+              <img alt="Keep icon" src="/images/soojin/iconKeep.jpg" />
+            </li>
+          </ul>
+          <div className="numberOfLikes">
+            <img alt="Friend profile" src="/images/soojin/friendProfile.jpg" />
+            <p>Liked by h0._.0118 and 83 others</p>
+          </div>
+          <div className="explanation">
+            <p className="boldId">sojjnng</p>
+            <p>모두 행복한 연말 되세요~ ✨⛄️</p>
+          </div>
+        </div>
+        <ul className="commentData">
+          {commentList.map(data => (
+            <UploadComment key={data.idx} id={data.id} comment={data.comment} />
+          ))}
         </ul>
-        <div className="numberOfLikes">
-          <img alt="Friend profile" src="/images/soojin/friendProfile.jpg" />
-          <p>Liked by h0._.0118 and 83 others</p>
-        </div>
-        <div className="explanation">
-          <p className="boldId">sojjnng</p>
-          <p>모두 행복한 연말 되세요~ ✨⛄️</p>
-        </div>
-      </div>
-      <ul className="commentData">
-        {commentList.map(data => (
-          <UploadComment key={data.idx} id={data.id} comment={data.comment} />
-        ))}
-      </ul>
-      <div className="comments">
         <div className="comments">
-          <input
-            autoComplete="off"
-            type="text"
-            placeholder="Add a comment"
-            onInput={commentInput}
-            onKeyPress={hitEnter}
-          />
+          <div className="comments">
+            <input
+              autoComplete="off"
+              type="text"
+              placeholder="Add a comment"
+              onInput={commentInput}
+              onKeyPress={hitEnter}
+            />
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }
 

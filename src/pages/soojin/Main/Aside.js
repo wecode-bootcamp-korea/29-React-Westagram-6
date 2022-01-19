@@ -3,7 +3,7 @@ import './Aside.scss';
 
 function Aside() {
   return (
-    <section className="main-right">
+    <section className="mainRight">
       <img alt="suggestions" src="/images/soojin/suggestion.png" />
     </section>
   );
