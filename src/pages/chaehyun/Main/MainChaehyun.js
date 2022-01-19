@@ -24,7 +24,6 @@ function MainChaehyun() {
       </div>
     );
   };
-
   const pressEnter = e => {
     if (e.key === 'Enter') {
       handleCommentData(e);

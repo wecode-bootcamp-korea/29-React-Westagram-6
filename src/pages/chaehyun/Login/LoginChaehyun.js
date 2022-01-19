@@ -12,6 +12,33 @@ function LoginChaehyun() {
     setInputPw(e.target.value);
   };
 
+  const register = () => {
+    fetch('http://10.58.2.189:8000/users/register', {
+      method: 'POST',
+      body: JSON.stringify({
+        name: 'jack',
+        email: inputId,
+        password: inputPw,
+        contact: Math.random(),
+        note: 'adsadad',
+      }),
+    })
+      .then(res => res.json())
+      .then(res => console.log('결과:', res));
+  };
+
+  const validation = () => {
+    fetch('http://10.58.2.189:8000/login/', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: inputId,
+        password: inputPw,
+      }),
+    })
+      .then(res => res.json())
+      .then(res => console.log('결과:', res));
+  };
+
   const [isActive, setIsActive] = useState(false);
   const isPassedLogin = () => {
     return inputId.includes('@') && inputPw.length > 8
