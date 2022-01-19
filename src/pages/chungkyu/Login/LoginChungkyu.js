@@ -16,7 +16,6 @@ function LoginChungkyu() {
   };
 
   const [button, setButton] = useState(true);
-  console.log('start', button);
 
   const changeColor = () => {
     if (activeid.length > 5 && activepw.length > 5) {
@@ -25,7 +24,21 @@ function LoginChungkyu() {
       setButton(true);
     }
   };
-  console.log('end', button);
+
+  const handleFetch = () => {
+    fetch('http://10.58.2.159/users/signin', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: activeid,
+        password: activepw,
+        account: activeid,
+        name: activeid,
+        phone: '010-7942-0886',
+      }),
+    })
+      .then(response => response.json())
+      .then(result => console.log('결과:', result));
+  };
 
   // useEffect(() => {
   //   if (activeid.length > 5 && activepw.length > 5) {
@@ -66,8 +79,9 @@ function LoginChungkyu() {
           </div>
           <div className="button-wrap">
             <Link to="/Main-chungkyu">
-              {' '}
-              <button disabled={button ? true : false}> 로그인</button>
+              <button disabled={button ? true : false} onClick={handleFetch}>
+                로그인
+              </button>
             </Link>
           </div>
           <div className="forgetpw">

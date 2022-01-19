@@ -78,7 +78,7 @@ article {
 }
 
 .list,
-ol {
+ul {
   display: block;
   align-items: flex-end;
   padding-left: 0px;
@@ -89,7 +89,7 @@ ol {
 }
 
 .comment input {
-  width: 590px;
+  width: 570px;
   border: none;
   outline: none;
 }
@@ -98,6 +98,7 @@ ol {
   opacity: 0.3;
   background-color: white;
   color: skyblue;
+  width: 60px;
 }
 
 .comment button:hover {

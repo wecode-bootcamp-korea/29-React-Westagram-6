@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './MainChungkyu.scss';
 import Nav from '../../../components/Nav/Nav';
 
 function MainChungkyu() {
+  const [commentlist, setCommentlist] = useState('');
+  const [comment, setComment] = useState('');
+
   return (
     <div className="mainChungkyu">
       <link href="./style/main.css" rel="stylesheet" type="text/css" />
@@ -25,17 +28,20 @@ function MainChungkyu() {
               </span>
               <ul className="list">
                 <li>
-                  <span className="name">chungkyukim</span>
-                  <span>런각인데.....</span>
+                  <ul className="name">chungkyukim</ul>
+                  <ul>{commentlist} </ul>
                 </li>
               </ul>
               <div className="comment">
                 <input
+                  onChange={e => {
+                    setComment(e.target.value);
+                  }}
                   calss="commentinput"
                   type="text"
                   placeholder="댓글을 입력하세요.."
                 />
-                <button className="button">게시</button>
+                <button className="commentbutton">게시</button>
               </div>
             </div>
             <div className="main-rights" />
