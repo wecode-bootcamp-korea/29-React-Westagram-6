@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './MainSoojin.scss';
 import Nav from '../../../components/Nav/Nav';
+import Aside from './Aside';
 // import COMMENT_LIST from '../../../../public/data/soojin/commentData';
 
 function MainSoojin() {
@@ -120,14 +121,6 @@ function Feed() {
           />
         </div>
       </div>
-    </section>
-  );
-}
-
-function Aside() {
-  return (
-    <section className="main-right">
-      <img alt="suggestions" src="/images/soojin/suggestion.png" />
     </section>
   );
 }

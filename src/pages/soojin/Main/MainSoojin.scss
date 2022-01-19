@@ -1,16 +1,16 @@
 @import '../../../styles/variables.scss';
 
-@mixin hs {
-  margin: 0;
-  padding: 2px;
-}
-
 .mainBody {
   padding-top: 90px;
   margin: 0px 17%;
   font-family: $theme-font;
 
   .mainpage {
+    a {
+      text-decoration-line: none;
+      color: black;
+    }
+
     .article {
       top: 10%;
       width: 60%;
@@ -87,21 +87,6 @@
           margin-top: 10px;
         }
       }
-    }
-
-    .main-right {
-      position: fixed;
-      top: 90px;
-      right: 17%;
-      width: 25%;
-      img {
-        width: 100%;
-      }
-    }
-
-    a {
-      text-decoration-line: none;
-      color: black;
     }
   }
 }
