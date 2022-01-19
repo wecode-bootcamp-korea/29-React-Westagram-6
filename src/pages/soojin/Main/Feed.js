@@ -43,7 +43,7 @@ function Feed() {
   // }, []);
 
   return (
-    <div>
+    <div className="storyAndFeed">
       <section className="stories">
         <img alt="stories" src="/images/soojin/stories.jpg" />
       </section>
@@ -97,15 +97,13 @@ function Feed() {
           ))}
         </ul>
         <div className="comments">
-          <div className="comments">
-            <input
-              autoComplete="off"
-              type="text"
-              placeholder="Add a comment"
-              onInput={commentInput}
-              onKeyPress={hitEnter}
-            />
-          </div>
+          <input
+            autoComplete="off"
+            type="text"
+            placeholder="Add a comment"
+            onInput={commentInput}
+            onKeyPress={hitEnter}
+          />
         </div>
       </section>
     </div>
