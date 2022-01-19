@@ -1,63 +1,62 @@
-@import '../../../styles/common.scss';
 @import '../../../styles/variables.scss';
 
 .westagram {
   height: 100vh;
   position: relative;
   text-align: center;
-}
 
-.westagramContainer {
-  position: absolute;
-  @include translate-center;
-  padding: 80px 55px;
-  border: $border-style;
-  background-color: white;
-
-  h1 {
-    font-family: 'Lobster', cursive;
-    font-size: 55px;
-    font-weight: normal;
-    margin-top: 0px;
-  }
-
-  a {
-    font-size: 10px;
-    color: dodgerblue;
-    text-decoration-line: none;
-  }
-}
-
-.login {
-  input {
-    width: 230px;
-    margin: 4px;
-    padding: 9px;
+  .westagramContainer {
+    position: absolute;
+    @include translate-center;
+    padding: 80px 55px;
     border: $border-style;
-    border-radius: 4px;
+    background-color: white;
 
-    cursor: text;
-    background-color: ghostwhite;
-  }
-  button {
-    width: 230px;
-    margin: 4px;
-    padding: 9px;
-    border: $border-style;
-    border-radius: 4px;
+    .login {
+      input {
+        width: 230px;
+        margin: 4px;
+        padding: 9px;
+        border: $border-style;
+        border-radius: 4px;
 
-    background-color: dodgerblue;
-    margin-bottom: 80px;
-    color: white;
-    font-weight: bold;
-    opacity: 1;
+        cursor: text;
+        background-color: ghostwhite;
+      }
+      button {
+        width: 230px;
+        margin: 4px;
+        padding: 9px;
+        border: $border-style;
+        border-radius: 4px;
 
-    &:disabled {
-      opacity: 0.5;
+        background-color: dodgerblue;
+        margin-bottom: 80px;
+        color: white;
+        font-weight: bold;
+        opacity: 1;
+
+        &:disabled {
+          opacity: 0.5;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
     }
 
-    &:hover {
-      cursor: pointer;
+    h1 {
+      font-family: 'Lobster', cursive;
+      font-size: 55px;
+      font-weight: normal;
+      margin-top: 0px;
+    }
+
+    a {
+      font-size: 10px;
+      color: dodgerblue;
+      text-decoration-line: none;
     }
   }
 }

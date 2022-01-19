@@ -23,6 +23,21 @@ function LoginSoojin() {
       ? setIsValidate(false)
       : setIsValidate(true);
   };
+  // 로그인&회원가입 실습
+  // const handleButton = () => {
+  //   fetch('http://10.58.3.161:8000/users/signin', {
+  //     method: 'POST',
+  //     body: JSON.stringify({
+  //       email: inputId,
+  //       password: inputPw,
+  //       // name: '',
+  //       // phone: '',
+  //       // account: '',
+  //     }),
+  //   })
+  //     .then(response => response.json())
+  //     .then(result => console.log(result));
+  // };
 
   useEffect(() => {
     console.log(inputId, inputPw);
@@ -56,7 +71,11 @@ function LoginSoojin() {
           </div>
           <div className="buttonWrapper">
             <Link to="/main-soojin">
-              <button disabled={isValidate} className="westaButton">
+              <button
+                disabled={isValidate}
+                className="westaButton"
+                // onClick={handleButton}
+              >
                 로그인
               </button>
             </Link>

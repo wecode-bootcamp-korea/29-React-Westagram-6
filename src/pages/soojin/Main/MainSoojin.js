@@ -112,7 +112,7 @@ function Feed() {
       <div className="comments">
         <div className="comments">
           <input
-            // autoComplete="off"
+            autoComplete="off"
             type="text"
             placeholder="Add a comment"
             onInput={commentInput}
