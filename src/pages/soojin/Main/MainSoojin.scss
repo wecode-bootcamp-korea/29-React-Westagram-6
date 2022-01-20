@@ -1,9 +1,11 @@
 @import '../../../styles/variables.scss';
 
 .mainBody {
-  padding-top: 90px;
-  margin: 0px 17%;
+  // padding-top: 90px;
+  // margin: 0px 17%;
+  padding: 90px 17%;
   font-family: $theme-font;
+  background-color: $lightlightgrey;
 
   .mainPage {
     a {
