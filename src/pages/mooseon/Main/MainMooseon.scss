@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+// .heading {
+//   font-family: 'Lobster', cursive;
+//   font-size: 55px;
+//   text-align: center;
+//   margin-bottom: 60px;
+// }
+
+//title > feeds >  mainimg
+
+// .title {
+//   width: 100px;
+//   height: 30px;
+//   border-left: 2px solid black;
+// }
+
+.feeds {
+  //variable include
+  float: left;
+  width: 614px;
+  margin-right: 28px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+
+  .mainImg {
+    width: 500px;
+    height: 550px;
+  }
+}
+
+.main-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mainBottom {
+}
