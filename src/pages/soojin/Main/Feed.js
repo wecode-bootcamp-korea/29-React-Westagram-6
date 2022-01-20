@@ -22,7 +22,7 @@ function Feed() {
       <div className="commentWrapper">
         <div className="yourId">{id}</div>
         <div className="yourComment">{comment}</div>
-        {/* <div className="delete">delete</div> */}
+        <div className="delete">delete</div>
       </div>
     );
   };

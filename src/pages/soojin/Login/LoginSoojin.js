@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './LoginSoojin.scss';
 
 function LoginSoojin() {
@@ -12,7 +12,6 @@ function LoginSoojin() {
   };
 
   const handlePwInput = event => {
-    // setPassword(event.target.value);
     const { value } = event.target;
     setInputPw(value);
   };
@@ -22,6 +21,11 @@ function LoginSoojin() {
     inputId.includes('@') && inputPw.length >= 5
       ? setIsValidate(false)
       : setIsValidate(true);
+  };
+
+  const navigate = useNavigate();
+  const goToMain = () => {
+    navigate('/main-soojin');
   };
   // 로그인&회원가입 실습
   // const handleButton = () => {
@@ -70,15 +74,15 @@ function LoginSoojin() {
             />
           </div>
           <div className="buttonWrapper">
-            <Link to="/main-soojin">
-              <button
-                disabled={isValidate}
-                className="westaButton"
-                // onClick={handleButton}
-              >
-                로그인
-              </button>
-            </Link>
+            {/* <Link to="/main-soojin"> */}
+            <button
+              disabled={isValidate}
+              className="westaButton"
+              onClick={goToMain}
+            >
+              로그인
+            </button>
+            {/* </Link> */}
           </div>
         </div>
         <a
