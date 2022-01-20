@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-
+// id가 너무 많은것 같다. 클래스 위주로 사용하라
 #heading {
   font-family: 'Lobster', cursive;
   font-size: 55px;
@@ -14,7 +14,7 @@
   position: relative;
   margin: auto;
 }
-
+// 반복적 사용될수있는 속성은 variable로
 #loginId,
 #loginPw {
   width: 360px;

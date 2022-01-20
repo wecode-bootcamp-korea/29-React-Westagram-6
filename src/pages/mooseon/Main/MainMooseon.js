@@ -1,12 +1,11 @@
 /* eslint-disable */
 import React, { useState } from 'react';
-import './MainMooseon.scss';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'; // 리액트 관련 패키지가 먼저 import된다
 import Nav from '../../../components/Nav/Nav';
 import Sections from './Sections';
+import './MainMooseon.scss'; // css파일은 가장 마지막에 Import
 
 function MainMooseon() {
-  //console.log('aaaa');
   let [comment, setComment] = useState('');
   let [commentList, setCommentList] = useState(['comment add here']);
 
@@ -21,34 +20,34 @@ function MainMooseon() {
       console.log(commentList);
     };
   }
-
+  //heading    main-right
   return (
     <div className="mainMooseon">
       <title>WESTAGRAM_Main</title>
       <Nav />
       <main>
-        <div id="feeds">
+        <div className="feeds">
           <article className="article">
             <div className="profile-head">
-              <img src="https://placeimg.com/22/22/any" alt="present-profile" />
+              <img alt="present-profile" src="https://placeimg.com/22/22/any" />
               <span>canon_mj</span>
-              <img src="https://placeimg.com/22/22/any" alt="more" />
+              <img alt="more" src="https://placeimg.com/22/22/any" />
             </div>
             <div>
               <img
-                id="mainImg"
-                src="https://placeimg.com/112/112/any"
+                className="mainImg"
                 alt="feedImage"
+                src="https://placeimg.com/112/112/any"
               />
             </div>
             <div>
-              <img src="https://placeimg.com/21/21/any" alt="feed-heart" />
-              <img src="https://placeimg.com/22/23/any" alt="bubble" />
-              <img src="https://placeimg.com/22/21/any" alt="share" />
-              <img src="https://placeimg.com/21/23/any" alt="collectionsss" />
+              <img alt="feed-heart" src="https://placeimg.com/21/21/any" />
+              <img alt="bubble" src="https://placeimg.com/22/23/any" />
+              <img alt="share" src="https://placeimg.com/22/21/any" />
+              <img alt="collectionsss" src="https://placeimg.com/21/23/any" />
             </div>
             <div>
-              <img src="https://placeimg.com/24/22/any" alt="mini-profile" />
+              <img alt="mini-profile" src="https://placeimg.com/24/22/any" />
               <p>aineworld님 외 10명이 좋아합니다</p>
             </div>
             <div>
@@ -58,21 +57,21 @@ function MainMooseon() {
 
               <br />
               <span>42분 전</span>
-              <img src="https://placeimg.com/22/22/any" alt="mini-heart" />
+              <img alt="mini-heart" src="https://placeimg.com/22/22/any" />
             </div>
 
             <div className="mainBottom">
-              <form id="comment">
+              <form className="comment">
                 <input
                   onChange={e => {
                     setComment(e.target.value);
                     console.log(comment);
                   }}
                   type="text"
-                  id="inputcomment"
+                  className="inputcomment"
                   placeholder="댓글 달기..."
                 />
-                <button onClick={newComment()} id="submit">
+                <button onClick={newComment()} className="submit">
                   게시
                 </button>
               </form>
@@ -88,7 +87,7 @@ function MainMooseon() {
 
                   <span>더보기</span>
                 </p>
-                <ul id="comment-wrapper"></ul>
+                <ul className="comment-wrapper"></ul>
               </div>
             </div>
           </article>
