@@ -2,6 +2,7 @@
 
 .storyAndFeed {
   .stories {
+    margin-bottom: 24px;
     img {
       top: 10%;
       width: 60%;
@@ -9,7 +10,6 @@
       border: $border-style;
       border-radius: 3px;
     }
-    margin-bottom: 24px;
   }
 
   .article {
@@ -54,6 +54,7 @@
           margin: 3px;
         }
       }
+
       .numberOfLikes {
         @include flex-center;
         font-size: 16px;
@@ -62,11 +63,11 @@
           margin-right: 10px;
         }
       }
+
       .explanation {
         @include flex-center;
-        font-size: 16px;
         margin: 10px;
-
+        font-size: 16px;
         .boldId {
           font-weight: bold;
           margin-right: 10px;

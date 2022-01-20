@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './LoginSoojin.scss';
 
 function LoginSoojin() {
@@ -27,6 +27,7 @@ function LoginSoojin() {
   const goToMain = () => {
     navigate('/main-soojin');
   };
+
   // 로그인&회원가입 실습
   // const handleButton = () => {
   //   fetch('http://10.58.3.161:8000/users/signin', {

@@ -1,4 +1,4 @@
-import React from 'react'; // {component}
+import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import LoginSoojin from './pages/soojin/Login/LoginSoojin';
