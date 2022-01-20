@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { useEffect } from 'react/cjs/react.development';
 import Nav from '../../../components/Nav/Nav';
 
 function MainChaehyun() {
@@ -11,14 +12,14 @@ function MainChaehyun() {
   const handleCommentData = () => {
     setCommentData(cur => [
       ...cur,
-      { id: 'zoro', comment: newComment, idx: Math.random() },
+      { userName: 'zoro', comment: newComment, idx: Math.random() },
     ]);
   };
 
-  const UploadComment = ({ id, comment, idx }) => {
+  const UploadComment = ({ name, comment, idx }) => {
     return (
       <div className="uploadedCommentWrapper">
-        <div className="name">{id}</div>
+        <div className="name">{name}</div>
         <div className="uploadedComment">{comment}</div>
         <button className="delete">x</button>
       </div>
@@ -37,6 +38,16 @@ function MainChaehyun() {
     handleCommentData(e);
     inputRef.current.value = '';
   };
+
+  useEffect(() => {
+    fetch('http://localhost:3000/data/chaehyun/commentData.json', {
+      method: 'GET',
+    })
+      .then(res => res.json())
+      .then(data => {
+        setCommentData(data);
+      });
+  }, []);
 
   return (
     <body>
@@ -119,9 +130,9 @@ function MainChaehyun() {
               <ul className="commentBox">
                 {commentData.map(data => (
                   <UploadComment
-                    id={data.id}
+                    name={data.userName}
                     comment={data.comment}
-                    key={data.idx}
+                    key={data.id}
                   />
                 ))}
               </ul>
