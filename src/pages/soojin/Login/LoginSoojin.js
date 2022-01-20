@@ -3,22 +3,35 @@ import { useNavigate } from 'react-router-dom';
 import './LoginSoojin.scss';
 
 function LoginSoojin() {
-  const [inputId, setInputId] = useState('');
-  const [inputPw, setInputPw] = useState('');
+  const [inputValues, setInputValues] = useState({
+    id: '',
+    password: '',
+  });
 
-  const handleIdInput = event => {
-    const { value } = event.target;
-    setInputId(value);
+  const handleInput = event => {
+    const { name, value } = event.target;
+    setInputValues({
+      ...inputValues,
+      [name]: value,
+    });
   };
 
-  const handlePwInput = event => {
-    const { value } = event.target;
-    setInputPw(value);
-  };
+  // const [inputId, setInputId] = useState('');
+  // const [inputPw, setInputPw] = useState('');
+
+  // const handleIdInput = event => {
+  //   const { value } = event.target;
+  //   setInputId(value);
+  // };
+
+  // const handlePwInput = event => {
+  //   const { value } = event.target;
+  //   setInputPw(value);
+  // };
 
   const [isValidate, setIsValidate] = useState(true);
   const validateButton = () => {
-    inputId.includes('@') && inputPw.length >= 5
+    inputValues.id.includes('@') && inputValues.password.length >= 5
       ? setIsValidate(false)
       : setIsValidate(true);
   };
@@ -45,13 +58,13 @@ function LoginSoojin() {
   // };
 
   useEffect(() => {
-    console.log(inputId, inputPw);
+    // console.log(inputId, inputPw);
     validateButton();
 
     return () => {
       // console.log(inputId, inputPw);
     };
-  }, [inputId, inputPw]);
+  }, [inputValues]);
 
   return (
     <div className="westagram">
@@ -60,18 +73,20 @@ function LoginSoojin() {
         <div className="login">
           <div>
             <input
-              onChange={handleIdInput}
-              type="text"
               className="westaId"
+              name="id"
+              type="text"
               placeholder="전화번호, 사용자 이름 또는 이메일"
+              onChange={handleInput}
             />
           </div>
           <div>
             <input
-              onChange={handlePwInput}
-              type="password"
               className="westaPw"
+              name="password"
+              type="password"
               placeholder="비밀번호"
+              onChange={handleInput}
             />
           </div>
           <div className="buttonWrapper">
