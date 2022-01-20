@@ -8,7 +8,7 @@ function MainSoojin() {
   return (
     <div className="mainBody">
       <Nav />
-      <main className="mainpage" role="main">
+      <main className="mainPage" role="main">
         <Feed />
         <Aside />
       </main>
