@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Feed.scss';
 
 function Feed() {
@@ -13,14 +13,14 @@ function Feed() {
   const handleCommentList = () => {
     setCommentList(cur => [
       ...cur,
-      { id: 'soojin', comment: urComment, idx: Math.random() },
+      { userName: 'soojin', comment: urComment, idx: Math.random() },
     ]);
   };
 
-  const UploadComment = ({ id, comment, idx }) => {
+  const UploadComment = ({ name, comment, idx }) => {
     return (
       <div className="commentWrapper">
-        <div className="yourId">{id}</div>
+        <div className="yourId">{name}</div>
         <div className="yourComment">{comment}</div>
         <div className="delete">delete</div>
       </div>
@@ -34,13 +34,15 @@ function Feed() {
     }
   };
 
-  // useEffect(() => {
-  //   fetch('http://localhost:3000/data/soojin/commendData.json')
-  //     .then(res => res.json())
-  //     .then(data => {
-  //       setCommentList(data);
-  //     });
-  // }, []);
+  useEffect(() => {
+    fetch('http://localhost:3000/data/soojin/commentData.json', {
+      method: 'GET',
+    })
+      .then(res => res.json())
+      .then(data => {
+        setCommentList(data);
+      });
+  }, []);
 
   return (
     <div className="storyAndFeed">
@@ -93,7 +95,11 @@ function Feed() {
         </div>
         <ul className="commentData">
           {commentList.map(data => (
-            <UploadComment key={data.idx} id={data.id} comment={data.comment} />
+            <UploadComment
+              key={data.id}
+              name={data.userName}
+              comment={data.content}
+            />
           ))}
         </ul>
         <div className="comments">

@@ -58,12 +58,11 @@ function LoginSoojin() {
   // };
 
   useEffect(() => {
-    // console.log(inputId, inputPw);
     validateButton();
 
-    return () => {
-      // console.log(inputId, inputPw);
-    };
+    // return () => {
+    //   console.log(inputId, inputPw);
+    // };
   }, [inputValues]);
 
   return (
