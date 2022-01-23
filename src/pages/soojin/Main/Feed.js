@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import UploadComment from './Data';
 import './Feed.scss';
 
 function Feed() {
@@ -13,36 +14,54 @@ function Feed() {
   const handleCommentList = () => {
     setCommentList(cur => [
       ...cur,
-      { userName: 'soojin', comment: urComment, idx: Math.random() },
+      {
+        email: 'try@gmail.com',
+        comment: urComment,
+        post_id: '1',
+        // idx: Math.random(),
+      },
     ]);
-  };
-
-  const UploadComment = ({ name, comment, idx }) => {
-    return (
-      <div className="commentWrapper">
-        <div className="yourId">{name}</div>
-        <div className="yourComment">{comment}</div>
-        <div className="delete">delete</div>
-      </div>
-    );
+    // console.log(commentList);
   };
 
   const hitEnter = e => {
     if (e.key === 'Enter') {
-      handleCommentList(e);
+      fetch('http://10.58.1.97:8002/comment/1', {
+        method: 'POST',
+        body: JSON.stringify({
+          email: 'try@gmail.com',
+          comment: urComment,
+          post_id: 1,
+        }),
+      })
+        .then(res => res.json())
+        .then(data => {
+          console.log(data);
+          if (data.message === 'SUCCESS') {
+            setCommentList(cur => [
+              ...cur,
+              {
+                email: 'try@gmail.com',
+                comment: urComment,
+                post_id: '1',
+                // idx: Math.random(),
+              },
+            ]);
+          }
+        });
+      // handleCommentList(e);
       e.target.value = '';
     }
   };
 
   useEffect(() => {
-    fetch('http://localhost:3000/data/soojin/commentData.json', {
-      method: 'GET',
-    })
+    fetch('http://10.58.1.97:8002/comment/1')
       .then(res => res.json())
-      .then(data => {
-        setCommentList(data);
+      .then(res => {
+        console.log(res);
+        setCommentList(res.result);
       });
-  }, []);
+  });
 
   return (
     <div className="storyAndFeed">
@@ -97,8 +116,8 @@ function Feed() {
           {commentList.map(data => (
             <UploadComment
               key={data.id}
-              name={data.userName}
-              comment={data.content}
+              name={data.user_id}
+              comment={data.comment}
             />
           ))}
         </ul>
