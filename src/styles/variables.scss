@@ -15,7 +15,13 @@
   transform: translate(-50%, -50%);
 }
 
-$theme-color: #e2e2e2;
+@mixin hs {
+  margin: 0;
+  padding: 2px;
+}
+
+$lightlightgrey: #fafafa;
+$lightgrey: #e2e2e2;
 $border-style: 1px solid #e2e2e2;
 $theme-font: apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
   Arial, sans-serif;

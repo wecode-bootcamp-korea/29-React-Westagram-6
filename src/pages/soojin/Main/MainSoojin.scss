@@ -1,0 +1,14 @@
+@import '../../../styles/variables.scss';
+
+.mainBody {
+  padding: 90px 17%;
+  font-family: $theme-font;
+  background-color: $lightlightgrey;
+
+  .mainPage {
+    a {
+      text-decoration-line: none;
+      color: black;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@import '../../../styles/variables.scss';
+
+.westagram {
+  height: 100vh;
+  position: relative;
+  text-align: center;
+
+  .westagramContainer {
+    position: absolute;
+    @include translate-center;
+    padding: 80px 55px;
+    border: $border-style;
+    background-color: white;
+
+    .login {
+      input {
+        width: 230px;
+        margin: 4px;
+        padding: 9px;
+        border: $border-style;
+        border-radius: 4px;
+
+        cursor: text;
+        background-color: $lightlightgrey;
+      }
+
+      button {
+        width: 230px;
+        margin: 4px;
+        padding: 9px;
+        border: $border-style;
+        border-radius: 4px;
+
+        background-color: dodgerblue;
+        margin-bottom: 80px;
+        color: white;
+        font-weight: bold;
+        opacity: 1;
+
+        &:disabled {
+          opacity: 0.5;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    h1 {
+      font-family: 'Lobster', cursive;
+      font-size: 55px;
+      margin: 30px;
+    }
+
+    a {
+      font-size: 10px;
+      color: dodgerblue;
+      text-decoration-line: none;
+    }
+  }
+}

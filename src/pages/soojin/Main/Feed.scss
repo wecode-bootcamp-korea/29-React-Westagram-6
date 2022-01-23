@@ -1,0 +1,104 @@
+@import '../../../styles/variables.scss';
+
+.storyAndFeed {
+  .stories {
+    margin-bottom: 24px;
+    img {
+      top: 10%;
+      width: 60%;
+      background-color: white;
+      border: $border-style;
+      border-radius: 3px;
+    }
+  }
+
+  .article {
+    top: 10%;
+    width: 60%;
+    background-color: white;
+    border: $border-style;
+    border-radius: 3px;
+
+    .profile {
+      @include flex-center;
+
+      img {
+        width: 50px;
+        margin: 10px;
+      }
+
+      h1 {
+        font-size: 15px;
+        @include hs;
+      }
+
+      h2 {
+        @include hs;
+        font-size: 12px;
+      }
+    }
+
+    .photo {
+      img {
+        width: 100%;
+      }
+    }
+
+    .information {
+      padding: 10px 5px;
+
+      ul {
+        @include flex-center;
+        img {
+          width: 40px;
+          margin: 3px;
+        }
+      }
+
+      .numberOfLikes {
+        @include flex-center;
+        font-size: 16px;
+        img {
+          width: 40px;
+          margin-right: 10px;
+        }
+      }
+
+      .explanation {
+        @include flex-center;
+        margin: 10px;
+        font-size: 16px;
+        .boldId {
+          font-weight: bold;
+          margin-right: 10px;
+        }
+      }
+    }
+
+    .commentData {
+      margin-bottom: 15px;
+      .commentWrapper {
+        @include flex-center;
+        font-size: 16px;
+        .yourId {
+          font-weight: bold;
+          margin: 4px 15px;
+        }
+        .yourComment {
+          flex-grow: 0.9;
+        }
+        .delete {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .comments {
+      input {
+        display: flex;
+        width: 100%;
+        height: 40px;
+      }
+    }
+  }
+}
